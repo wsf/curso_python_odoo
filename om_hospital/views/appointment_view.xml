@@ -19,6 +19,7 @@
                     <button name="action_done" string="Mark As Done" class="btn-primary"
                             type="object"/>
                 </header>
+
                 <field name="name"/>
                 <field name="doctor_id"/>
                 <field name="patient_id"/>

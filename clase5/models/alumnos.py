@@ -24,3 +24,13 @@ class Alumnos(models.Model):
         for rec in self:
             if rec.edad == 0 or rec.edad > 100:
                 raise ValidationError(_("La edad inválida"))
+
+    def cant_mayores(self):
+        cant = 0
+        for rec in self:
+            if rec.edad > 17:
+                cant = cant + 1
+
+        mensaje = f'La cantidad de mayores de edad es: {cant}'
+        raise ValidationError(mensaje)
+
