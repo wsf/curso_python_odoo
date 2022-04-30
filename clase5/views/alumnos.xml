@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="action_curso_alumnos2" model="ir.actions.act_window">
+        <field name="name">Alumnos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">curso.alumnos</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="context">{}</field>
+    </record>
+
     <record id="curso_alumnos_tree" model="ir.ui.view">
         <field name="name">curso.alumnos</field>
         <field name="model">curso.alumnos</field>
         <field name="arch" type="xml">
 
-            <tree>
+            <tree multi_edit = "1">
                         <header>
                            <button string="Cant Mayores" name="cant_mayores" type="object"/>
                         </header>
@@ -13,12 +22,16 @@
                 <field name="name"/>
                 <field name="edad"/>
                 <field name="sexo"/>
+                <field name="categoria"/>
+                <field name="categoria" string="Categoria2" widget="badge" decoration-warning="categoria=='Mayor de Edad'" decoration-success="categoria=='Menor de Edad'" />
+
 
             </tree>
 
 
         </field>
     </record>
+
     <record id="view_curso_alumnos_form" model="ir.ui.view">
         <field name="name">curso.alumnos.form</field>
         <field name="model">curso.alumnos</field>
@@ -31,32 +44,54 @@
                             <field name="name"/>
                             <field name="edad"/>
                             <field name="sexo"/>
+                            <field name="cursos" widget="res_partner_many2one"/>
+
+                            <field name="persona" widget="manyone_tags">
+
+                                <tree>
+                                    <field name="name" string="Tutor"/>
+                                    <field name="function" string="Cargo-Rol"/>
+                                </tree>
+
+                            </field>
+
                         </group>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    <record id="action_curso_alumnos" model="ir.actions.act_window">
-        <field name="name">Alumnos</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">curso.alumnos</field>
-        <field name="view_mode">tree,form</field>
-        <field name="context">{}</field>
-<!--        <field name="context">{'search_default_responsible_id': 1}</field>-->
 
-
+    <record id="cursos_alummnos_pivot" model="ir.ui.view">
+    <field name="name">Tabla OLAP Alumno</field>
+    <field name="model">curso.alumnos</field>
+    <field name="arch" type="xml">
+        <pivot>
+            <field name="edad" string="Edad" type="measure" />
+            <field name="sexo" string="Sexo" type="col" />
+            <field name="name" string="Alumno" type="row" />
+        </pivot>
+    </field>
     </record>
-    <menuitem id="menu_curso_python_odoo"
+
+    <record id="cursoso_alumnos_graph" model="ir.ui.view">
+        <field name="name">Graficos Alumnos</field>
+        <field name="model">curso.alumnos</field>
+        <field name="arch" type="xml">
+        <graph string="test">
+        <field name="edad" />
+        </graph>
+        </field>
+     </record>
+
+    <menuitem id="menu_curso_python_odoo2"
               name="Curso Python Odoo"
-              sequence="10"/>
-    <menuitem id="menu_alumno_root"
+              />
+
+    <menuitem id="menu_alumno_root2"
               name="Alumno"
-              parent="menu_curso_python_odoo"
-              sequence="10"/>
-      <menuitem id="menu_alumnos"
-              name="Alumnos"
-              parent="menu_alumno_root"
-              action="action_curso_alumnos"
-              sequence="10"/>
+              parent="menu_curso_python_odoo2"
+              action="action_curso_alumnos2"
+              />
+
 </odoo>

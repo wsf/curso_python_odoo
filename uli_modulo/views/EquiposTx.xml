@@ -1,0 +1,61 @@
+<odoo>
+    <!-- Vista Grilla -->
+
+    <record id="tree_equiposTx" model="ir.ui.view">
+        <field name="name">xmv.equipostx</field>
+        <field name="model">xmv.equipostx</field>
+        <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="name"/>
+                    <field name="contacto"/>
+                    <field name="id_equipo"/>
+
+                </tree>
+
+        </field>
+
+    </record>
+    <!-- Fin Vista Grilla -->
+
+    <!-- Vista Formulario -->
+    <record id="form_equiposTx" model="ir.ui.view">
+        <field name="name">xmv.equipostx.form</field>
+        <field name="model">xmv.equipostx</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                    <field name="name"/>
+                    <field name="contacto"/>
+                    <field name="id_equipo"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Fin Vista Formulario -->
+
+    <!-- Acción -->
+    <record id="action_equiposTx" model="ir.actions.act_window">
+        <field name="name">Equipos de Trasplante</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">xmv.equipostx</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+    <!--Fin Acción -->
+
+    <menuitem id="menu_crossmatchvirtual"
+              name="Cross Match Virtual"
+              sequence="10"/>
+    <menuitem id="menu_equiposTx"
+              name="Equipos de Trasplante"
+              parent="menu_crossmatchvirtual"
+
+              sequence="10"/>
+
+</odoo>
