@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     
-    <record id="report_patient_details" model="ir.actions.report">
-        <field name="name">Patient Details</field>
-        <field name="model">hospital.patient</field>
+    <record id="report_alumnos_detalles" model="ir.actions.report">
+        <field name="name">Listado de Alumnos</field>
+        <field name="model">curso.alumnos</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.report_patient_detail</field>
-        <field name="report_file">om_hospital.report_patient_detail</field>
-        <field name="binding_model_id" ref="model_hospital_patient"/>
+        <field name="report_name">clase5.reporte_alumnos_detalle</field>
+        <field name="report_file">clase5.reporte_alumnos_detalle</field>
+        <field name="binding_model_id" ref="model_curso_alumnos"/>
         <field name="binding_type">report</field>
     </record>
 
-
+    <!--
     <record id="report_patient_card" model="ir.actions.report">
         <field name="name">Patient Card</field>
         <field name="model">hospital.patient</field>
@@ -21,6 +21,7 @@
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>
+
     <record id="report_patient_card_xls" model="ir.actions.report">
         <field name="name">Patient Card Excel</field>
         <field name="model">hospital.patient</field>
@@ -30,5 +31,7 @@
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>
+
+    -->
 
 </odoo>

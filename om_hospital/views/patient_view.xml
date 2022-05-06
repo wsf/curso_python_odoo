@@ -90,6 +90,7 @@
 <!--                            type="action"/>-->
 <!--                    <field name="state" widget="statusbar" statusbar_visible="draft,done,confirm"/>-->
                 </header>
+
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="action_open_appointments" type="object" class="oe_stat_button" icon="fa-calendar">

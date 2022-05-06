@@ -71,6 +71,8 @@
                             <field name="date_checkup"/>
                         </group>
                     </group>
+
+
                     <notebook>
                         <page string="Doctor Prescription" name="doctor_prescription">
                             <group>

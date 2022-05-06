@@ -13,7 +13,9 @@
     'data': ['views/alumnos.xml',
              'views/cursos.xml',
              'views/qweb/analitica_alumnos.xml',
-             'security/ir.model.access.csv'
+             'security/ir.model.access.csv',
+             'report/alumnos_detalles.xml',
+             'report/report.xml'
             ],
     'demo': [],
     'qweb': [],
