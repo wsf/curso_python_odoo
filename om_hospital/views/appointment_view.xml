@@ -79,6 +79,7 @@
                                 <field name="prescription"/>
                             </group>
                         </page>
+
                         <page string="Medicine" name="medicine">
                             <field name="prescription_line_ids">
                                 <tree editable="bottom">
@@ -91,7 +92,7 @@
                                             <field name="name"/>
                                         </group>
                                         <group>
-                                            <field name="qty"/>
+
                                         </group>
                                     </group>
                                 </form>
@@ -141,7 +142,7 @@
     </record>
 
     <menuitem id="menu_appointment_root"
-              name="Appointments"
+                  name="Appointments"
               parent="menu_hospital_root"
               sequence="20"/>
 

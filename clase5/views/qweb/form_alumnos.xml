@@ -1,0 +1,29 @@
+<odoo>
+<template id="form_alumnos_ida">
+
+
+        <h2>Formulario en Qweb</h2>
+
+            <form method="POST" action="/form_alumnos_vuelta/">
+
+                <div class="container">
+
+                <label >Nombre:</label><br/>
+                <input type="text" id="nombre" name="nombre"/><br/>
+
+                <label >Apellido:</label> <br/>
+                <input type="text" id="apellido" name="apellido"/><br/>
+
+                <label > Femenino</label>
+                <input type="checkbox" id="femenino" name="femenino" value="Boat"/><br/>
+
+                <label > Masculino</label>
+                <input type="checkbox" id="masculino" name="masculino" value="Boat"/><br/>
+
+              <input type="submit" value="Aceptar"/>
+
+                </div>
+            </form>
+
+ </template>
+</odoo>

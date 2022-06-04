@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Curso Python-Odoo 2022_v2',
+    'name': 'Curso Python-Odoo',
     'version': '2',
     'summary': 'Ejercicio 1 - Práctica 5 v2',
     'sequence': -100,
@@ -13,6 +13,7 @@
     'data': ['views/alumnos.xml',
              'views/cursos.xml',
              'views/qweb/analitica_alumnos.xml',
+             'views/qweb/form_alumnos.xml',
              'security/ir.model.access.csv',
              'report/alumnos_detalles.xml',
              'report/report.xml'

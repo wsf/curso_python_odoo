@@ -2,7 +2,7 @@
 <odoo>
     
     <record id="report_alumnos_detalles" model="ir.actions.report">
-        <field name="name">Listado de Alumnos</field>
+        <field name="name">Listado de Alumnos 2 </field>
         <field name="model">curso.alumnos</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">clase5.reporte_alumnos_detalle</field>

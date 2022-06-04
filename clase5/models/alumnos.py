@@ -5,6 +5,8 @@ from odoo import api, fields, models, _
 # importo un servicio que me permite mostar alertas al usuario cuando sea necesario
 from odoo.exceptions import ValidationError
 # declaro una clase llamada Alumnos que hereda todas las propiedades de la clase model.Model
+import requests as req2
+
 class Alumnos(models.Model):
     _name = "curso.alumnos"
     _description = "Alumnos Python Odoo"
@@ -49,6 +51,12 @@ class Alumnos(models.Model):
             if e.edad > 17:
                 cant = cant + 1
 
-
         mensaje = f'La cantidad de mayores de edad es: {cant}'
+
+        try:
+            url = f"https://curso-python-odoo-flask.alejandrosartor.repl.co/mensaje/{mensaje}"
+            x = req2.get(url)
+        except:
+            pass
+
         raise ValidationError(mensaje)

@@ -17,8 +17,9 @@
                            <table class="table table-stripped">
 
                             <t  t-foreach = "alumnos"  t-as = "c" >
+
                                          <tr>
-                                             <td style="text-align:left"> <t  t-esc = "c['name']"/>  </td>
+                                             <td style="text-align:left"> <t  t-esc = "c['name']"> </t>  </td>
                                              <td style="text-align:right"> <t  t-esc = "c['edad']"/> </td>
                                              <td style="text-align:left"> <t  t-esc = "c['sexo']"/> </td>
                                              <td style="text-align:left"> <t  t-esc = "c['categoria']"/> </td>

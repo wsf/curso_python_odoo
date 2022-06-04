@@ -43,5 +43,3 @@ class HospitalDoctor(models.Model):
 
 
 
-
-

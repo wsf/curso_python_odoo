@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <record id="action_create_appointments" model="ir.actions.server">
         <field name="name">Create Appointment</field>
         <field name="model_id" ref="om_hospital.model_hospital_patient"/>
@@ -51,7 +50,6 @@
             </kanban>
         </field>
     </record>
-
     <record id="view_patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.patient</field>
@@ -68,16 +66,15 @@
             </tree>
         </field>
     </record>
-
     <record id="view_patient_form" model="ir.ui.view">
         <field name="name">hospital.patient.form</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form>
                 <header>
-<!--                    <button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary" states="draft"-->
-<!--                            confirm="Are you sure that you need to confirm ?"-->
-<!--                            type="object"/>-->
+<!--                    <button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary" states="draft">
+<!--                            confirm="Are you sure that you need to confirm ?"
+<!--                            type="object"/>
 <!--                    <button id="button_done" name="action_done" string="Mark As Done" class="btn-primary" states="confirm"-->
 <!--                            type="object"/>-->
 <!--                    <button id="button_draft" name="action_draft" string="Set To Draft" class="btn-primary"-->
@@ -92,7 +89,7 @@
                 </header>
 
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
+                    <div class="button_box" name="button_box">
                         <button name="action_open_appointments" type="object" class="oe_stat_button" icon="fa-calendar">
                             <div class="o_stat_info">
                                 <field name="appointment_count" class="o_stat_value"/>
@@ -100,6 +97,7 @@
                             </div>
                         </button>
                     </div>
+
                     <field name="image" widget="image" class="oe_avatar"/>
                     <div class="oe_title">
                         <h1>

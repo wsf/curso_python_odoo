@@ -1,20 +1,19 @@
 # -*- coding: utf-8 -*-
-
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
-
 
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Hospital Patient"
     _order = "id desc"
-
     @api.model
     def default_get(self, fields):
         res = super(HospitalPatient, self).default_get(fields)
         res['note'] = 'NEW Patient Created'
         return res
+
+
 
     name = fields.Char(string='Name', required=True, tracking=True)
     reference = fields.Char(string='Order Reference', required=True, copy=False, readonly=True,
